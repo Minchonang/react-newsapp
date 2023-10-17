@@ -1,0 +1,41 @@
+<body>
+    <div></div>
+  
+    <script>
+      const div = document.querySelector('div');
+  
+    //   function getData1() {
+    //     const data = fetch('http://ggoreb.com/api/lotto.jsp?drwNo=1');
+    //     data.then((res) => res.json()).then((res) => {
+    //       for(let key in res) {
+    //         div.innerHTML += `<p>${res[key]}</p>`;
+    //       }
+    //     });
+    //   }
+    //   getData1();
+  
+    //   await표현 방법 
+    // 규칙: await를 쓴 경우는 그 코드기 쓰여진 함수 껍데기에 async를 붙인다. +    // 함수를 만들어 주고 그 제일 앞에 async를 붙임
+
+    //   async function getData2() {
+    //     const data = await fetch('http://ggoreb.com/api/lotto.jsp?drwNo=1');
+    //     const res = await data.json();
+    //     for(let key in res) {
+    //       div.innerHTML += `<p>${res[key]}</p>`;
+    //     }
+    //   }
+    //   getData2();
+  
+
+    async function getData2() {
+        const data = await axios.get('http://ggoreb.com/api/lotto.jsp?drwNo=1');
+
+        
+          for(let key in res.data) {
+            div.innerHTML += `<p>${res[key]}</p>`;
+          }
+      }
+      getData2();
+    </script>
+  </body>
+  
